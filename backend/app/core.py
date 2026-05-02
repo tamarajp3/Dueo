@@ -4,7 +4,7 @@ class Task:
     def __init__(self, task_name, assessment_type_multiplier, deadline, weighing, subject, estimated_time):
         self.task_name = task_name
         self.assessment_type_multiplier  = assessment_type_multiplier # 0.5 = quiz, 2 = project, 0.25 = content
-        self.deadline = datetime #datetime string
+        self.deadline = deadline #datetime string
         self.weighing = weighing
         self.subject = subject #class/subject
         self.estimated_time = estimated_time

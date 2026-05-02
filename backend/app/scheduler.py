@@ -12,7 +12,7 @@ def optimal_schedule(tasks, daily_availability):
         day: {
             tasks: []
             total_task_time: 0,
-            remaining_time: hours_per_day
+            remaining_time: daily_availability
         } for day in DAYS
     }
 
@@ -25,5 +25,5 @@ def optimal_schedule(tasks, daily_availability):
                 day_data[total_task_time] += task.estimated_time
                 day_data[remaining_time] -= task.estimated_time
                 
-    return week_schedule
+    return week_schedule 
     
