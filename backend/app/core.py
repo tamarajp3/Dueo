@@ -8,6 +8,7 @@ class Task:
         self.weighing = weighing
         self.subject = subject #class/subject
         self.estimated_time = estimated_time
+        self.time_left = estimated_time
     
     def get_time_until_deadline(self):
         delta = self.deadline - datetime.now()
@@ -27,4 +28,10 @@ class Task:
 
         return task_importance * task_urgency * overdue_bias
 
+    def subtract_time(self, time: float):
+        self.time_left = max(0, (self.time_left - time))
+        return 
     
+
+    def is_complete(self):
+        return self.time_left <= 0

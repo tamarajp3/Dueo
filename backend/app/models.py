@@ -5,10 +5,10 @@ from datetime import datetime
 class createTask(BaseModel):
     task_name: str 
     assessment_type_multiplier : float
-    deadline = datetime
-    weighing = float
-    subject = str
-    estimated_time = float
+    deadline : datetime
+    weighing : float
+    subject : str
+    estimated_time : float
 
 
 class scheduleRequest(BaseModel):
